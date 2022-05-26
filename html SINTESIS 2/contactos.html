@@ -18,14 +18,31 @@
       });
 
     </script>
-
+    <script src="scriptLogin.js"></script>
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
 </head>
+  <body onload="showUsernameIfLoggedIn()">
+  <div id="login">
 
+      <div>
+          <label id="loggedUser"></label>
+      </div>
+
+      <form id="formulario" action="javascript:login(username.value, password.value)">
+          <label for="username">Username</label>
+          <input type="text" name="username" id="username"><br>
+          <label id="errorUser" class="error">Hace falta poner un nombre de usuario</label><br>
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password"><br>
+          <label id="errorPass" class="error">Hace falta poner un password</label><br>
+          <input type="submit" value="Submit">
+      </form>
+
+  </div>
 
     <!-- aqui se pone el carrusel js el codigo extraido de una carpeta o libreria externa -->
     <nav class="movil">
